@@ -16,20 +16,24 @@ public class Main {
 		return flag;
 	}
 	
-	public static void FizzBuzz() {
-	    for (int i =1; i <=100; i++) {
-	    	if(((i % 3) == 0)&&((i % 5) == 0)) {
-		        System.out.println("Fizz" + "Buzz");
-		        return;
-		    } else if ( i % 3 == 0){
-			    System.out.println("Fizz");
-		    } else if (i % 5 == 0) {
-			    System.out.println("Buzz");
-		    } else {
-			    System.out.println(i);
-		    }
-	    }  
-    }
+	public static boolean FizzBuzz()
+	{
+		for (int i =1; i <=100; i++) 
+		{
+			if(((i % 3) == 0)&&((i % 5) == 0))
+			{
+			System.out.println("FizzBuzz");
+			} else if ( i % 3 == 0){
+				System.out.println("Fizz");
+			} else if (i % 5 == 0) {
+				System.out.println("Buzz");
+			} else {
+				System.out.println(i);
+			}
+		}
+		return false;	
+	}
+
 
     public static void main(String[] args) {
 	    Scanner in = new Scanner(System.in);
@@ -50,7 +54,6 @@ public class Main {
 	        System.out.println();
 	    }
 	    System.out.println(Array(size, array));
-	    System.out.println("FizzBuzz");
-	    FizzBuzz();
+	    System.out.println(FizzBuzz());
 	}
 }
